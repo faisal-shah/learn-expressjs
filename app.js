@@ -2,10 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.set('view engine', 'pug')
-
 app.get('/', (req, res) => {
-    res.render('index', { title: 'Hey', message: 'Hello there! Got Pug?' })
+    res.send('Hello World\n\r')
+    console.log('body: ', req.body)
 })
 
 app.listen(port, () => {
